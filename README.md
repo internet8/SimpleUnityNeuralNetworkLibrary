@@ -19,7 +19,7 @@
 NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
 </pre>
 <p>You can train your network like this:</p>
-<pre lang="csharp">
+<pre lang="csharp"><code>
 // Training method from XOR example
 
 // supervised learning
@@ -62,7 +62,7 @@ void Train()
     Debug.Log("[1, 0] -> " + nn.FeedForward(new float[] { 1, 0 })[0]);
     Debug.Log("[1, 1] -> " + nn.FeedForward(new float[] { 1, 1 })[0]);
 }
-</pre>
+</code></pre>
 
 <p>If you want to visualize your network, you can use:</p>
 <pre lang="csharp">
