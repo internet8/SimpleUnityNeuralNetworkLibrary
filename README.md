@@ -25,42 +25,42 @@ NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
 // supervised learning
 void Train()
 {
-    // training 5k epochs
+&nbsp;&nbsp;&nbsp;&nbsp;// training 5k epochs
 &nbsp;&nbsp;&nbsp;&nbsp;float[] inputs = new float[2];
 &nbsp;&nbsp;&nbsp;&nbsp;float[] targets = new float[1];
 &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < 5000; i++)
 &nbsp;&nbsp;&nbsp;&nbsp;{
-        // randomizing data
-        switch (Random.Range(0, 4))
-        {
-            case 0:
-                inputs[0] = 0;
-                inputs[1] = 0;
-                targets[0] = 0;
-                break;
-            case 1:
-                inputs[0] = 0;
-                inputs[1] = 1;
-                targets[0] = 1;
-                break;
-            case 2:
-                inputs[0] = 1;
-                inputs[1] = 0;
-                targets[0] = 1;
-                break;
-            default:
-                inputs[0] = 1;
-                inputs[1] = 1;
-                targets[0] = 0;
-                break;
-        }
-        nn.TrainNetwork(inputs, targets);
-    }
-    // printing network predictions after training
-    Debug.Log("[0, 0] -> " + nn.FeedForward(new float[] { 0, 0 })[0]);
-    Debug.Log("[0, 1] -> " + nn.FeedForward(new float[] { 0, 1 })[0]);
-    Debug.Log("[1, 0] -> " + nn.FeedForward(new float[] { 1, 0 })[0]);
-    Debug.Log("[1, 1] -> " + nn.FeedForward(new float[] { 1, 1 })[0]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// randomizing data
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch (Random.Range(0, 4))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 0:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[0] = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[1] = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targets[0] = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[0] = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[1] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targets[0] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[0] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[1] = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targets[0] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[0] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inputs[1] = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targets[0] = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nn.TrainNetwork(inputs, targets);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;// printing network predictions after training
+&nbsp;&nbsp;&nbsp;&nbsp;Debug.Log("[0, 0] -> " + nn.FeedForward(new float[] { 0, 0 })[0]);
+&nbsp;&nbsp;&nbsp;&nbsp;Debug.Log("[0, 1] -> " + nn.FeedForward(new float[] { 0, 1 })[0]);
+&nbsp;&nbsp;&nbsp;&nbsp;Debug.Log("[1, 0] -> " + nn.FeedForward(new float[] { 1, 0 })[0]);
+&nbsp;&nbsp;&nbsp;&nbsp;Debug.Log("[1, 1] -> " + nn.FeedForward(new float[] { 1, 1 })[0]);
 }
 </pre>
 
