@@ -77,13 +77,13 @@ visualizer.DrawNetwork(nn, 400, 5, Color.cyan, Color.red, Color.blue, new Color(
 NeuralNetwork parent1;
 NeuralNetwork parent2;
 NeuralNetwork child = NeuralNetwork.Crossover(parent1, parent2, 5);
-
+<br>
 // public static float GetDistBetweenPoints | Attributes: (float x1, float y1, float x2, float y2)
 float distance = StaticMath.GetDistBetweenPoints(hit.point.x, hit.point.y, transform.position.x, transform.position.y);
-
+<br>
 // public static float GetAngleBetweenPoints | Attributes: (float x1, float y1, float x2, float y2)
 float angle = StaticMath.GetAngleBetweenPoints(hit.point.x, hit.point.y, transform.position.x, transform.position.y);
-
+<br>
 // public static float Remap | Attributes: (float value, float from1, float to1, float from2, float to2)
 float newValue = StaticMath.Remap(50, 0, 100, 0, 1); // newValue = 0.5f
 </pre>
