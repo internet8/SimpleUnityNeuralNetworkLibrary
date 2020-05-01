@@ -13,12 +13,13 @@
 </ul>
 
 <h2>How to use</h2>
+<p>If you don't care about the example scenes, then copy the NeuralNetwork folder to your Assets folder.</p>
 <p>This line will generate a neural network with two inputs, one hidden layer (three neurons in hidden layers) and one output.</p>
-```c#
+```csharp
 NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
 ```
 <p>You can train your network like this:</p>
-```c#
+```csharp
 // Training method from XOR example
 
 // supervised learning
@@ -66,13 +67,13 @@ NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
 ```
 
 <p>If you want to visualize your network, you can use:</p>
-```c#
+```csharp
 // public void DrawNetwork | Attributes: (NeuralNetwork network, int size, int layerGap, Color neuronColor, Color connectionStrong, Color connectionWeak, Color background)
 visualizer.DrawNetwork(nn, 400, 5, Color.cyan, Color.red, Color.blue, new Color(1, 1, 1, 0.3f));
 ```
 
 <p>Some useful extra methods:</p>
-```c#
+```csharp
 // public static NeuralNetwork Crossover | Attributes: (NeuralNetwork nn1, NeuralNetwork nn2, float mutationPercent)
 NeuralNetwork parent1;
 NeuralNetwork parent2;
