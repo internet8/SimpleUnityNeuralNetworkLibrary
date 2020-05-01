@@ -13,7 +13,7 @@
 </ul>
 
 <h2>How to use</h2>
-<p>If you don't care about the example scenes, then copy the NeuralNetwork folder to your Assets folder.</p>
+<p>If you don't care about the example scenes, then copy the NetworkScripts folder to your Assets folder.</p>
 <p>This line will generate a neural network with two inputs, one hidden layer (three neurons in hidden layers) and one output.</p>
 <pre lang="csharp">
 NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
