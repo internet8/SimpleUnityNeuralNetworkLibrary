@@ -67,6 +67,7 @@ void Train()
 <p>If you want to visualize your network, you can use:</p>
 <pre lang="csharp">
 // public void DrawNetwork | Attributes: (NeuralNetwork network, int size, int layerGap, Color neuronColor, Color connectionStrong, Color connectionWeak, Color background)
+public NetworkVisualizer visualizer;
 visualizer.DrawNetwork(nn, 400, 5, Color.cyan, Color.red, Color.blue, new Color(1, 1, 1, 0.3f));
 </pre>
 
