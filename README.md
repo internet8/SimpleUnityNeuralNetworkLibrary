@@ -23,46 +23,44 @@ NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
 // Training method from XOR example
 
 // supervised learning
-    void Train ()
+void Train()
+{
+    // training 5k epochs
+    float[] inputs = new float[2];
+    float[] targets = new float[1];
+    for (int i = 0; i < 5000; i++)
     {
-        // training 5k epochs
-        float[] inputs = new float[2];
-        float[] targets = new float[1];
-        for (int i = 0; i < 5000; i++)
+        // randomizing data
+        switch (Random.Range(0, 4))
         {
-            // randomizing data
-            switch (Random.Range(0, 4))
-            {
-                case 0:
-                    inputs[0] = 0;
-                    inputs[1] = 0;
-                    targets[0] = 0;
-                    break;
-                case 1:
-                    inputs[0] = 0;
-                    inputs[1] = 1;
-                    targets[0] = 1;
-                    break;
-                case 2:
-                    inputs[0] = 1;
-                    inputs[1] = 0;
-                    targets[0] = 1;
-                    break;
-                default:
-                    inputs[0] = 1;
-                    inputs[1] = 1;
-                    targets[0] = 0;
-                    break;
-            }
-            nn.TrainNetwork(inputs, targets);
+            case 0:
+                inputs[0] = 0;
+                inputs[1] = 0;
+                targets[0] = 0;
+                break;
+            case 1:
+                inputs[0] = 0;
+                inputs[1] = 1;
+                targets[0] = 1;
+                break;
+            case 2:
+                inputs[0] = 1;
+                inputs[1] = 0;
+                targets[0] = 1;
+                break;
+            default:
+                inputs[0] = 1;
+                inputs[1] = 1;
+                targets[0] = 0;
+                break;
         }
-        // printing network predictions after training
-        Debug.Log("[0, 0] -> " + nn.FeedForward(new float[] { 0, 0 })[0]);
-        Debug.Log("[0, 1] -> " + nn.FeedForward(new float[] { 0, 1 })[0]);
-        Debug.Log("[1, 0] -> " + nn.FeedForward(new float[] { 1, 0 })[0]);
-        Debug.Log("[1, 1] -> " + nn.FeedForward(new float[] { 1, 1 })[0]);
+        nn.TrainNetwork(inputs, targets);
     }
-
+    // printing network predictions after training
+    Debug.Log("[0, 0] -> " + nn.FeedForward(new float[] { 0, 0 })[0]);
+    Debug.Log("[0, 1] -> " + nn.FeedForward(new float[] { 0, 1 })[0]);
+    Debug.Log("[1, 0] -> " + nn.FeedForward(new float[] { 1, 0 })[0]);
+    Debug.Log("[1, 1] -> " + nn.FeedForward(new float[] { 1, 1 })[0]);
 }
 </pre>
 
