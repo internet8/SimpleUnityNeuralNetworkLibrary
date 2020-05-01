@@ -15,11 +15,11 @@
 <h2>How to use</h2>
 <p>If you don't care about the example scenes, then copy the NeuralNetwork folder to your Assets folder.</p>
 <p>This line will generate a neural network with two inputs, one hidden layer (three neurons in hidden layers) and one output.</p>
-```csharp
+<pre lang="csharp">
 NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
-```
+</pre>
 <p>You can train your network like this:</p>
-```csharp
+<pre lang="csharp">
 // Training method from XOR example
 
 // supervised learning
@@ -64,16 +64,16 @@ NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
     }
 
 }
-```
+</pre>
 
 <p>If you want to visualize your network, you can use:</p>
-```csharp
+<pre lang="csharp">
 // public void DrawNetwork | Attributes: (NeuralNetwork network, int size, int layerGap, Color neuronColor, Color connectionStrong, Color connectionWeak, Color background)
 visualizer.DrawNetwork(nn, 400, 5, Color.cyan, Color.red, Color.blue, new Color(1, 1, 1, 0.3f));
-```
+</pre>
 
 <p>Some useful extra methods:</p>
-```csharp
+<pre lang="csharp">
 // public static NeuralNetwork Crossover | Attributes: (NeuralNetwork nn1, NeuralNetwork nn2, float mutationPercent)
 NeuralNetwork parent1;
 NeuralNetwork parent2;
@@ -87,7 +87,7 @@ float angle = StaticMath.GetAngleBetweenPoints(hit.point.x, hit.point.y, transfo
 
 // public static float Remap | Attributes: (float value, float from1, float to1, float from2, float to2)
 float newValue = StaticMath.Remap(50, 0, 100, 0, 1); // newValue = 0.5f
-```
+</pre>
 
 <h2>Screenshots</h2>
 <img src="screenshots/or.png" alt="XOR">
