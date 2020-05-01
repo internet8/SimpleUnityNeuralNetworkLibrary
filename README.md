@@ -9,7 +9,7 @@
     <li>Network visualizer.</li>
     <li>Simple matrix class.</li>
     <li>Useful static math methods.</li>
-    <li>Two example scenes.</li>
+    <li>Three example scenes.</li>
 </ul>
 
 <h2>How to use</h2>
