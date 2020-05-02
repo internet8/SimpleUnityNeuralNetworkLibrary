@@ -12,12 +12,25 @@
     <li>Three example scenes.</li>
 </ul>
 
+<h2>Projects using Simple Unity Neural Network Library</h2>
+<ul>
+    <li><a href="https://play.google.com/store/apps/details?id=com.WollyGames.CircleofLife&hl=en_US">Circle of Life</a></li>
+</ul>
+
 <h2>How to use</h2>
 <p>If you don't care about the example scenes, then copy the NetworkScripts folder to your Assets folder.</p>
 <p>This line will generate a neural network with two inputs, one hidden layer (three neurons in hidden layers) and one output.</p>
 <pre lang="csharp">
 NeuralNetwork nn = new NeuralNetwork(2, 1, 3, 1);
 </pre>
+
+<p>Getting the network prediction:</p>
+<pre lang="csharp">
+float[] inputs = { 0, 1 };
+float[] output = nn.FeedForward(inputs);
+Debug.Log(output[0]); // network prediction (number between 0 and 1)
+</pre>
+
 <p>You can train your network like this:</p>
 <pre lang="csharp">
 // Training method from XOR example
