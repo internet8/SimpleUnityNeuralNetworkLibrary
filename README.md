@@ -38,7 +38,7 @@ Debug.Log(output[0]); // network prediction (number between 0 and 1)
 // supervised learning
 void Train()
 {
-&nbsp;&nbsp;&nbsp;&nbsp;// training 5k epochs
+&nbsp;&nbsp;&nbsp;&nbsp;// training 5k times
 &nbsp;&nbsp;&nbsp;&nbsp;float[] inputs = new float[2];
 &nbsp;&nbsp;&nbsp;&nbsp;float[] targets = new float[1];
 &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < 5000; i++)
